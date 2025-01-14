@@ -29,6 +29,8 @@ public class WordFinder
         {
             // ElementAt is expensive, so we get the row and we access to each element with index directly
             var row = matrix.ElementAt(rowIndex);
+
+            // To take adventage of the iteration, the value of the strings are assigned to columns.
             for (int columnIndex = 0; columnIndex < columnsSize; columnIndex++)
             {
                 _matrix[columnIndex][rowIndex] = row[columnIndex];
